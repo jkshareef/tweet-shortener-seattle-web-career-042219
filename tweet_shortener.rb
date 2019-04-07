@@ -21,11 +21,7 @@ end
 
 def word_substituter(tweet)
   tweet = tweet.split
-  for word in tweet
-    word = "tweet"
-  end
-  puts tweet
-  tweet.join(" ")
+  tweet.each do |element|
 end
 
 def bulk_tweet_shortener(tweets)
