@@ -11,13 +11,11 @@ end
 
 def word_substituter(tweet)
   tweet = tweet.split
-  for word in tweet
+  tweet.each_with_index { |word, index|
     if dictionary.keys.include?(word.to_sym)
-    tweet.each_with_index { |word, index|
       tweet[index] = dictionary[word.to_sym]
-    }
     end
-  end
+  }
   tweet.join(" ")
 end
 
