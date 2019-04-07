@@ -9,24 +9,17 @@ def dictionary
   :and => "&"}
 end
 
-#def word_substituter(tweet)
- # tweet = tweet.split
-  #tweet.each_with_index { |word, index|
-   # if dictionary.keys.include?(word.to_sym)
-    #  tweet[index] = dictionary[word.to_sym]
-    #end
-  #}
-  #tweet.join(" ")
-#end
-
 def word_substituter(tweet)
   tweet = tweet.split
-  tweet.each do |word|
+  tweet.each_with_index { |word, index|
     if dictionary.keys.include?(word.to_sym)
-      word = dictionary[word.to_sym]
+      tweet[index] = dictionary[word.to_sym]
     end
-  end
+  }
+  tweet.join(" ")
 end
+
+
 
 def bulk_tweet_shortener(tweets)
   for tweet in tweets
