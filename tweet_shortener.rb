@@ -21,7 +21,11 @@ end
 
 def word_substituter(tweet)
   tweet = tweet.split
-  tweet.each do |element|
+  tweet.each do |word|
+    if word in dictionary.keys.include?(word.to_sym)
+      word = dictionary[word.to_sym]
+    end
+  end
 end
 
 def bulk_tweet_shortener(tweets)
