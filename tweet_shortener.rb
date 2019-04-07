@@ -13,9 +13,7 @@ def word_substituter(tweet)
   tweet = tweet.split
   tweet.each do |word|
     if dictionary.keys.include?(word.to_sym)
-      puts dictionary.keys.include?(word.to_sym)
       word = dictionary[word.to_sym]
-      puts word
     end
   end
   tweet.join(" ")
