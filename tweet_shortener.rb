@@ -22,7 +22,7 @@ end
 def word_substituter(tweet)
   tweet = tweet.split
   tweet.each do |word|
-    if word in dictionary.keys.include?(word.to_sym)
+    if dictionary.keys.include?(word.to_sym)
       word = dictionary[word.to_sym]
     end
   end
