@@ -10,11 +10,6 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  array = ["Ruckus", "Riley", "Cannon"]
-  for word in array
-    word = "Douglas"
-  end
-  puts array
   tweet = tweet.split
   tweet.each_with_index { |word, index|
     if dictionary.keys.include?(word.to_sym)
