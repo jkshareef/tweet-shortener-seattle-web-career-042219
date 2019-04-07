@@ -13,7 +13,7 @@ def word_substituter(tweet)
   tweet = tweet.split
   for word in tweet
     if dictionary.keys.include?(word.to_sym)
-    tweet.each_with_index { |index, word|
+    tweet.each_with_index { |word, index|
       tweet[index] = dictionary[word.to_sym]
     }
     end
