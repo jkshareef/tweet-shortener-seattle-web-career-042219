@@ -2,18 +2,20 @@
 def dictionary
   dict = {hello: "hi",
   to: "2", two: "2", too: "2",
-  "for":"4", four: "4",
+  :for => "4", four: "4",
   be: "b",
   you: "u",
   at: "@",
-  "and": "&"}
+  :and => "&"}
 end
 
 def word_substituter(tweet)
   tweet = tweet.split
-  tweet.each do |word|
+  for word in tweet
     if dictionary.keys.include?(word.to_sym)
-      word = dictionary[word.to_sym]
+    tweet.each_with_index { |index, word|
+      tweet[index] = dictionary[word.to_sym]
+    }
     end
   end
   tweet.join(" ")
