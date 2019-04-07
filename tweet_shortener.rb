@@ -11,7 +11,7 @@ end
 
 def word_substituter(tweet)
   tweet = tweet.split
-  tweet.collect do |word|
+  tweet.each do |word|
     if dictionary.keys.include?(word.to_sym)
       word = dictionary[word.to_sym]
     end
