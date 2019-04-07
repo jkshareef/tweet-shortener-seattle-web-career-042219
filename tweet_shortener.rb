@@ -24,6 +24,7 @@ def word_substituter(tweet)
   for word in tweet
     word = "tweet"
   end
+  puts tweet
   tweet.join(" ")
 end
 
